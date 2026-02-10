@@ -2,6 +2,23 @@ import { Globe2Icon, ChevronRight } from "lucide-react";
 import { Button } from "./ui/Button";
 
 const Serviceses = () => {
+  const services = [
+    {
+      title: "Frontend Development",
+      service:
+        "Building responsive, high-performance interfaces with clean and scalable code.",
+    },
+    {
+      title: "UI Implementation",
+      service:
+        "Translating designs into pixel-perfect, accessible, and intuitive user experiences.",
+    },
+    {
+      title: "Performance & Optimization",
+      service:
+        "Improving speed, usability, and reliability across modern web platforms",
+    },
+  ];
   return (
     <section className="flex justify-center items-center flex-col gap-9">
       <h2 className="heading">
@@ -14,8 +31,8 @@ const Serviceses = () => {
             Frontend Development
           </h3>
           <p className="font-medium tracking-wide text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            delectus deleniti tempora nisi maxime.
+            Building responsive, high-performance interfaces with clean and
+            scalable code.
           </p>
           <Button text="Explore Service" variant="black" />
         </div>

@@ -76,7 +76,32 @@ Royal Purple	#5A2D82	Creative, premium feel, stands out on light background
 Dark Orange	#D96C00	Energetic without being red; works for buttons/accents
 Forest Green	#1B5E20	Confident, fresh, readable, professional
 */
+.message-label,
+.form-label {
+  position: absolute;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  pointer-events: none;
+  padding: 0 5px;
+  background: var(--background);
+}
+.form-label {
+  top: 50%;
+}
+.message-label {
+  top: 12%;
+}
 
+.form-input:valid + .form-label,
+.form-input:valid + .message-label,
+.form-input:focus + .form-label,
+.form-input:focus + .message-label,
+.form-input:not(:placeholder-shown) + .message-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -1px;
+  font-size: 14px;
+}
 /* vertical line */
 .timeline::before {
   content: "";
@@ -160,4 +185,10 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
     border-width: 20px 30px 20px 0;
     border-color: transparent var(--primary) transparent transparent;
   }
+}
+.svg-bg {
+  background-image: url("../assets/circle-scatter-haikei.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

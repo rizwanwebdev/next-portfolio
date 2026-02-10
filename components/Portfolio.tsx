@@ -5,7 +5,7 @@ const Portfolio = () => {
       <div className="flex flex-col justify-center items-center">
         <h2 className="heading">Portfolio</h2>
         <p className="text-center text-xl font-medium">
-          Real work that focues on design, performance and result
+          Real work that focuses on design, performance and result
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

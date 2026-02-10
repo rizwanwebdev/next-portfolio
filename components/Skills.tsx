@@ -9,15 +9,15 @@ const Skills = () => {
             Skills & <span className="text-primary">Expertise</span>
           </h2>
           <p className="text-lg max-w-2xl">
-            A frontend-first skillset supported by design thinking and solid
-            backend foundations.
+            The tools, technologies, and strengths I use to build modern,
+            high-quality web experiences.
           </p>
         </div>
 
         {/* Skill Layout */}
         <div className="grid gap-10 md:grid-cols-3">
           {/* Frontend & Design (Primary) */}
-          <div className="md:col-span-2 rounded-3xl bg-neutral p-10 shadow-sm border border-foreground/5 flex flex-col gap-10">
+          <div className="md:col-span-2 rounded-3xl  p-10 shadow-sm bg-background border-2 border-foreground/20 flex flex-col gap-10">
             <h3 className="text-2xl md:text-3xl text-center font-bold">
               🎨🖌️ Frontend & UI Engineering
             </h3>
@@ -53,7 +53,7 @@ const Skills = () => {
           {/* Supporting Skills */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-10">
             {/* Design */}
-            <div className="rounded-3xl bg-neutral p-8 shadow-sm border border-black/5 flex flex-col gap-2">
+            <div className="rounded-3xl  p-8 shadow-sm bg-background border-2 border-foreground/20 flex flex-col gap-2">
               <h3 className="font-heading text-xl font-semibold mb-4">
                 🎨 Design & Collaboration
               </h3>
@@ -65,7 +65,7 @@ const Skills = () => {
             </div>
 
             {/* Backend & Tools */}
-            <div className="rounded-3xl bg-neutral p-8 shadow-sm border border-black/5 flex flex-col gap-2">
+            <div className="rounded-3xl p-8 shadow-sm bg-background border-2 border-foreground/20 flex flex-col gap-2">
               <h3 className="font-heading text-xl font-semibold mb-4">
                 👨‍💻 Backend & Tools
               </h3>

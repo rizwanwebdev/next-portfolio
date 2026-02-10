@@ -1,4 +1,3 @@
-import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/Button";
 const HeroSection = () => {
   return (
@@ -8,9 +7,9 @@ const HeroSection = () => {
         <span> Attention </span> — I Design the
         <span> Winning </span> Side as a <span>Frontend Developer</span>.
       </h1>
-      <p className="font-medium text-xl text-center">
-        Frontend Developer crafting high-performance interfaces with clean
-        <br /> code and strong <span> UX</span>
+      <p className="max-w-2xl  text-xl text-center">
+        Frontend Developer crafting high-performance interfaces with clean code
+        and strong UX.
       </p>
       <div className="flex gap-4">
         <Button text="See My Projects" variant="black" />

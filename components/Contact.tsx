@@ -1,4 +1,3 @@
-import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/Button";
 const Contact = () => {
   return (
@@ -19,38 +18,50 @@ const Contact = () => {
         <div>
           <form className="flex flex-col gap-4 *:flex *:flex-col">
             <fieldset className="relative">
-              <label htmlFor="name">Full Name</label>
               <input
                 type="text"
+                id="name"
+                placeholder=" "
+                className="form-input border px-3 py-3"
                 name="name"
                 autoComplete="name"
-                id="name"
-                aria-label="name"
-                className="border transition-all duration-300 px-3 py-3 focus:border-primary focus-within:border-primary hover:border-primary"
-                placeholder="FullName"
+                required
               />
+              <label htmlFor="name" className="form-label text-foreground/90">
+                Full Name
+              </label>
             </fieldset>
-            <fieldset>
-              <label htmlFor="email">Email</label>
+            <fieldset className="relative">
               <input
                 type="text"
+                id="email"
                 name="email"
                 autoComplete="email"
-                id="email"
-                aria-label="email"
-                className="border transition-all duration-300 px-3 py-3 focus:border-primary focus-within:border-primary hover:border-primary"
+                placeholder=" "
+                required
+                className="form-input border px-3 py-3"
               />
+              <label htmlFor="email" className="form-label text-foreground/90">
+                Full Name
+              </label>
             </fieldset>
-            <fieldset>
-              <label htmlFor="message">Message</label>
+            <fieldset className="relative">
               <textarea
                 name="message"
                 autoComplete="message"
                 id="message"
                 aria-label="message"
-                className="border transition-all duration-300 px-3 py-3 focus:border-primary focus-within:border-primary hover:border-primary"
+                className="form-input border px-3 py-3"
                 rows={6}
+                required
+                placeholder=" "
               />
+              <label
+                htmlFor="message"
+                className="message-label text-foreground/90"
+              >
+                Message
+              </label>
             </fieldset>
             <fieldset>
               <Button text="Send" variant="black" disabled />
@@ -58,8 +69,12 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div>
-        <img src="/rizwan-illustraion.png" alt="rizwan-illustraion" />
+      <div className="w-full h-full overflow-hidden">
+        <img
+          src="/rizwan-illustraion.png"
+          className="min-[950px]:max-h-170 w-full object-cover object-center rounded-2xl"
+          alt="rizwan-illustraion"
+        />
       </div>
     </section>
   );

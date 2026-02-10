@@ -19,8 +19,8 @@ const FooterSection = () => {
           <div>
             <h3 className="text-3xl text-primary">Rizwan</h3>
             <p className="font-medium">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio,
-              doloremque!
+              Frontend Developer focused on modern, performance-driven web
+              interfaces.
             </p>
           </div>
           <div>
@@ -64,7 +64,7 @@ const FooterSection = () => {
         </div>
         <div className="flex py-1 border-t flex-row justify-between gap-4 items-center">
           <p className="logo text-lg leading-10">
-            &copy; 2026 Rizwan. All Rights Reserved.
+            &copy; 2026 Rizwan | All Rights Reserved.
           </p>
           <div className="flex flex-col md:flex-row gap-6">
             <span className="logo text-lg leading-10">/Privacy</span>
