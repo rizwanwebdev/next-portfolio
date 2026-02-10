@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --background: #e6e6dc;
+  --foreground: #000000;
+  --primary: #5a2d82;
+  --neutral: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-neutral: var(--neutral);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --text-md: 17px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #e6e6dc;
+    --foreground: #000000;
+    --primary: #5a2d82;
+    --neutral: #ffffff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .logo {
+    @apply font-heading;
+  }
+  .logo {
+    @apply font-semibold;
+  }
+  header,
+  footer,
+  section {
+    @apply px-4 md:px-8 lg:px-12;
+  }
+  section {
+    @apply py-20 md:py-25 lg:py-30;
+  }
+  p,
+  li,
+  span {
+    @apply font-medium;
+  }
+  .heading {
+    @apply text-4xl md:text-5xl font-bold leading-tight *:text-primary;
+  }
+}
+
+/* 
+Color	Hex	Use case / vibe
+Deep Blue	#003366	Bold, professional, techy, works well on light bg and white text
+Teal / Cyan	#007C91	Modern, approachable, still strong, good for focus elements
+Royal Purple	#5A2D82	Creative, premium feel, stands out on light background
+Dark Orange	#D96C00	Energetic without being red; works for buttons/accents
+Forest Green	#1B5E20	Confident, fresh, readable, professional
+*/
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  width: 3px;
+  height: 90%;
+  background: #ee4d4d;
+  transform: translateX(-50%);
+}
+.timeline-item.right {
+  margin-left: calc(50% + 30px);
+}
+.timeline-item.left {
+  margin-right: 30px;
+  max-width: calc(50% - 30px);
+}
+
+/* small circle */
+.timeline-item .dot {
+  position: absolute;
+  top: 5%;
+  right: -40px;
+  width: 20px;
+  height: 20px;
+  background: #ee4d4d;
+  border-radius: 50%;
+}
+
+.timeline-item.right .dot {
+  left: -40px;
+  right: auto;
+  background: #801ac5 !important;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  border-style: solid;
+}
+.timeline-item.right::before {
+  left: -16px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent var(--primary) transparent transparent;
+}
+.timeline-item.left::before {
+  right: -16px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent var(--primary);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item,
+  .timeline-item.right {
+    max-width: calc(100% - 40px);
+    margin-left: 40px;
+    margin-right: 0px;
+    padding-left: 40px;
+  }
+  .timeline-item.left {
+    max-width: calc(100% - 40px);
+    margin-right: -40px;
+  }
+
+  .timeline-item .dot,
+  .timeline-item.right .dot {
+    left: -40px;
+    right: -30px;
+  }
+  .timeline-item.left::before {
+    right: 100%;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #ee4d4d transparent transparent;
+  }
+}
