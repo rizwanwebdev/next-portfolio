@@ -1,7 +1,10 @@
 import { Button } from "./ui/Button";
 const Contact = () => {
   return (
-    <section className="grid grid-cols-1 min-[950px]:grid-cols-2 gap-6">
+    <section
+      id="contact"
+      className="grid grid-cols-1 min-[950px]:grid-cols-2 gap-6"
+    >
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-2">
           <h2 className="heading">
@@ -42,7 +45,7 @@ const Contact = () => {
                 className="form-input border px-3 py-3"
               />
               <label htmlFor="email" className="form-label text-foreground/90">
-                Full Name
+                Email
               </label>
             </fieldset>
             <fieldset className="relative">
@@ -64,7 +67,7 @@ const Contact = () => {
               </label>
             </fieldset>
             <fieldset>
-              <Button text="Send" variant="black" disabled />
+              <Button submit text="Send" variant="black" disabled />
             </fieldset>
           </form>
         </div>

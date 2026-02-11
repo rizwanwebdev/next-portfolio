@@ -7,10 +7,18 @@ const HeaderSection = () => {
           <div className="logo text-2xl font-semibold">Rizwan</div>
           <nav className="hidden sm:block">
             <ul className="flex flex-row gap-4 *:font-heading *:text-xl *:font-medium">
-              <li>Works</li>
-              <li>Services</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li>
+                <a href="#works">Works</a>
+              </li>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </nav>
           <MobileMenu />

@@ -1,12 +1,6 @@
-import {
-  Facebook,
-  Github,
-  Instagram,
-  LinkedinIcon,
-  ChevronRight,
-  Mail,
-} from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "./ui/Button";
+import { Socials } from "./ui/Socials";
 
 const FooterSection = () => {
   return (
@@ -44,20 +38,7 @@ const FooterSection = () => {
                 hey@rizwanweb.site
               </a>
             </p>
-            <div className="flex gap-3">
-              <span className="w-10 h-10 bg-primary rounded-full flex justify-center items-center  text-background">
-                <Facebook />
-              </span>
-              <span className="w-10 h-10 bg-primary rounded-full flex justify-center items-center  text-background">
-                <Github />
-              </span>
-              <span className="w-10 h-10 bg-primary rounded-full flex justify-center items-center  text-background">
-                <Instagram />
-              </span>
-              <span className="w-10 h-10 bg-primary rounded-full flex justify-center items-center  text-background">
-                <LinkedinIcon />
-              </span>
-            </div>
+            <Socials size={10} />
 
             <Button text="Get In Touch" variant="black" />
           </div>

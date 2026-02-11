@@ -57,7 +57,7 @@ const Skills = () => {
               <h3 className="font-heading text-xl font-semibold mb-4">
                 🎨 Design & Collaboration
               </h3>
-              <ul className="font-body text-sm leading-relaxed text-black/80 space-y-2">
+              <ul className="font-body text-sm leading-relaxed text-foreground/80 space-y-2">
                 <li>Figma & Sketch</li>
                 <li>Design → Code Translation</li>
                 <li>Working with Design & Marketing Teams</li>
@@ -69,7 +69,7 @@ const Skills = () => {
               <h3 className="font-heading text-xl font-semibold mb-4">
                 👨‍💻 Backend & Tools
               </h3>
-              <ul className="font-body text-sm leading-relaxed text-black/80 space-y-2">
+              <ul className="font-body text-sm leading-relaxed text-foreground/80 space-y-2">
                 <li>Node.js · Express</li>
                 <li>MongoDB · SQL / MySQL</li>
                 <li>REST APIs · Authentication</li>

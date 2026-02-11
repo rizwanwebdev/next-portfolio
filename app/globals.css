@@ -32,12 +32,15 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
   margin: 0 auto;
 }
-
+html,
+body {
+  scroll-behavior: smooth;
+}
 @layer base {
   h1,
   h2,
@@ -56,7 +59,7 @@ body {
     @apply px-4 md:px-8 lg:px-12;
   }
   section {
-    @apply py-20 md:py-25 lg:py-30;
+    @apply py-15;
   }
   p,
   li,
@@ -65,6 +68,14 @@ body {
   }
   .heading {
     @apply text-4xl md:text-5xl font-bold leading-tight *:text-primary;
+  }
+}
+@layer components {
+  .btnBaseStyle {
+    @apply flex items-center gap-2 font-medium text-lg border-2 border-transparent py-2 px-3 transition-all duration-200  w-fit;
+  }
+  .socialStyles {
+    @apply bg-primary rounded-full flex justify-center items-center  text-neutral;
   }
 }
 
@@ -76,6 +87,9 @@ Royal Purple	#5A2D82	Creative, premium feel, stands out on light background
 Dark Orange	#D96C00	Energetic without being red; works for buttons/accents
 Forest Green	#1B5E20	Confident, fresh, readable, professional
 */
+.mt-10 {
+  margin-top: 60px !important;
+}
 .message-label,
 .form-label {
   position: absolute;
@@ -90,7 +104,7 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   top: 50%;
 }
 .message-label {
-  top: 12%;
+  top: 15%;
 }
 
 .form-input:valid + .form-label,
@@ -108,9 +122,9 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   position: absolute;
   left: 50%;
   top: 2%;
-  width: 3px;
+  width: 6px;
   height: 90%;
-  background: #ee4d4d;
+  background: var(--primary);
   transform: translateX(-50%);
 }
 .timeline-item.right {
@@ -131,7 +145,7 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   background: var(--primary);
   border-radius: 50%;
   z-index: 22;
-  border: 1px solid var(--neutral);
+  border: 2px solid var(--neutral);
 }
 
 .timeline-item.right .dot {

@@ -3,15 +3,18 @@ type ButtonProps = {
   text: string;
   variant: "black" | "white";
   disabled?: boolean;
+  submit?: boolean;
 };
-export function Button({ text, variant, disabled = false }: ButtonProps) {
-  const baseStyle =
-    "flex items-center gap-2 font-medium text-lg border-2 border-transparent py-2 px-3 transition-all duration-200 group w-fit";
-
+export function Button({
+  text,
+  variant,
+  submit = false,
+  disabled = false,
+}: ButtonProps) {
   const variantStyles =
     variant === "black"
       ? "text-foreground border-b-foreground hover:border-foreground"
-      : "text-background border-b-background hover:border-background";
+      : "text-neutral border-b-neutral hover:border-neutral";
 
   const disabledStyles = disabled
     ? "opacity-50 cursor-not-allowed pointer-events-none hover:border-transparent "
@@ -19,9 +22,10 @@ export function Button({ text, variant, disabled = false }: ButtonProps) {
 
   return (
     <button
+      type={submit ? "submit" : "button"}
       disabled={disabled}
       aria-disabled={disabled}
-      className={`${baseStyle} ${variantStyles} ${disabledStyles}`}
+      className={`btnBaseStyle group ${variantStyles} ${disabledStyles}`}
     >
       <span>{text}</span>
       <ChevronRight
