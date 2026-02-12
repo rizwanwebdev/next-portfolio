@@ -1,10 +1,13 @@
 import MobileMenu from "./MobileMenu";
+import Link from "next/link";
 const HeaderSection = () => {
   return (
     <>
       <header className="relative top-6">
         <div className="flex justify-between items-center py-2">
-          <div className="logo text-2xl font-semibold">Rizwan</div>
+          <div className="logo text-2xl font-semibold">
+            <Link href="/">Rizwan</Link>
+          </div>
           <nav className="hidden sm:block">
             <ul className="flex flex-row gap-4 *:font-heading *:text-xl *:font-medium">
               <li>
