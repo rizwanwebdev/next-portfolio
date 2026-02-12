@@ -12,8 +12,8 @@ const HeroSection = () => {
         and strong UX.
       </p>
       <div className="flex flex-col items-center md:flex-row gap-4">
-        <Button text="See My Projects" variant="black" />
-        <Button text="Let's Talk" variant="black" />
+        <Button text="See My Projects" variant="primary" />
+        <Button text="Let's Talk" variant="primary" />
       </div>
     </section>
   );

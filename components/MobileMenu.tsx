@@ -5,8 +5,17 @@ const MobileMenu = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="sm:hidden relative">
-      <button className="cursor-pointer" onClick={() => setOpen(!open)}>
-        {!open ? <TextAlignJustify /> : <X className="text-primary" />}
+      <button className="cursor-pointer">
+        <input type="checkbox" id="checkbox" />
+        <label
+          onClick={() => setOpen(!open)}
+          htmlFor="checkbox"
+          className="toggle"
+        >
+          <div className="bars" id="bar1"></div>
+          <div className="bars" id="bar2"></div>
+          <div className="bars" id="bar3"></div>
+        </label>
       </button>
       {open ? (
         <nav className="absolute w-62  right-2 bg-primary rounded-2xl px-3 py-10">

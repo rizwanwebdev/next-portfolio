@@ -86,9 +86,9 @@ const FORM = () => {
       </fieldset>
       <fieldset>
         {loading ? (
-          <Button submit text="Sending..." variant="black" />
+          <Button submit text="Sending..." variant="primary" />
         ) : (
-          <Button submit text="Send" variant="black" />
+          <Button submit text="Send" variant="primary" />
         )}
       </fieldset>
     </form>

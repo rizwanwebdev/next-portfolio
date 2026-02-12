@@ -41,7 +41,7 @@ const Serviceses = () => {
               {srvc.title}
             </h3>
             <p className="font-medium tracking-wide text-lg">{srvc.service}</p>
-            <Button text="Explore Service" variant="black" />
+            <Button text="Explore Service" variant="primary" />
           </div>
         ))}
       </div>

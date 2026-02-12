@@ -72,7 +72,7 @@ body {
 }
 @layer components {
   .btnBaseStyle {
-    @apply flex items-center gap-2 font-medium text-lg border-2 border-transparent py-2 px-3 transition-all duration-200  w-fit;
+    @apply font-bold rounded cursor-pointer py-2 px-4 border-b-4 transition-all duration-200  w-fit;
   }
   .socialStyles {
     @apply bg-primary rounded-full flex justify-center items-center  text-neutral;
@@ -105,7 +105,6 @@ body {
     opacity: 0.4;
   }
   to {
-    background: var(--color-foreground);
     opacity: 1;
   }
 }
@@ -122,6 +121,67 @@ select:-webkit-autofill {
 input:-moz-autofill {
   box-shadow: 0 0 0 100px var(--color-background) inset !important;
 }
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
 /* 
 Color	Hex	Use case / vibe
 Deep Blue	#003366	Bold, professional, techy, works well on light bg and white text
@@ -227,9 +287,8 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
     max-width: calc(100% - 55px);
     margin-left: 55px;
     margin-right: 0px;
-    padding-left: 40px;
   }
-  .timeline-item.left {
+  .timeline-item.card-left {
     max-width: calc(100% - 55px);
     margin-right: -55px;
   }

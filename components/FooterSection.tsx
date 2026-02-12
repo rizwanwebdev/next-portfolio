@@ -40,7 +40,7 @@ const FooterSection = () => {
             </p>
             <Socials size={10} />
 
-            <Button text="Get In Touch" variant="black" />
+            <Button text="Get In Touch" variant="primary" />
           </div>
         </div>
         <div className="flex py-1 border-t flex-row justify-between gap-4 items-center">

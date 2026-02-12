@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 type ButtonProps = {
   text: string;
-  variant: "black" | "white";
+  variant: "primary" | "secondry";
   disabled?: boolean;
   submit?: boolean;
 };
@@ -11,26 +11,16 @@ export function Button({
   submit = false,
   disabled = false,
 }: ButtonProps) {
-  const variantStyles =
-    variant === "black"
-      ? "text-foreground border-b-foreground hover:border-foreground"
-      : "text-neutral border-b-neutral hover:border-neutral";
-
-  const disabledStyles = disabled
-    ? "opacity-50 cursor-not-allowed pointer-events-none hover:border-transparent "
-    : "cursor-pointer";
+  const varnt = `${variant === "primary" ? "bg-primary hover:bg-primary/80 text-background  border-foreground hover:border-primary" : "bg-background hover:bg-background/80 text-foreground  border-primary hover:border-primary/80"}`;
 
   return (
     <button
+      name="button"
+      aria-label="button"
       type={submit ? "submit" : "button"}
-      disabled={disabled}
-      aria-disabled={disabled}
-      className={`btnBaseStyle group ${variantStyles} ${disabledStyles}`}
+      className={`btnBaseStyle ${varnt} `}
     >
-      <span>{text}</span>
-      <ChevronRight
-        className={` transition-all  duration-200 ${disabled ? "" : " group-hover:translate-x-1 group-hover:scale-105"}`}
-      />
+      {text}
     </button>
   );
 }

@@ -25,13 +25,17 @@ const About = () => {
         <span className="text-xl font-medium">Connect With Me</span>
         <Socials size={10} />
         <div className="flex flex-wrap gap-4 mt-6">
-          <Button text="See My Projects" variant="black" />
-          <Button text="Let's Talk" variant="black" />
+          <Button text="See My Projects" variant="primary" />
+          <Button text="Let's Talk" variant="primary" />
         </div>
       </div>
       <div className="flex justify-center max-h-150 ">
         <img
           src="/rizwan-frontend-developer.png"
+          alt="rizwan-frontend-developer"
+          loading="lazy"
+          title="Rizwan"
+          aria-label="img"
           className="min-h-150 object-cover rounded-2xl"
         />
       </div>

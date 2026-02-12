@@ -11,7 +11,7 @@ const Contact = () => {
           <h2 className="heading">
             Let's Get in <span>Touch</span>
           </h2>
-          <Button text="Schedule a meeting" variant="black" />
+          <Button text="Schedule a meeting" variant="primary" />
         </div>
         <div className="relative">
           <hr />
@@ -29,6 +29,9 @@ const Contact = () => {
           src="/rizwan-illustraion.png"
           className="min-[950px]:max-h-170 w-full object-cover object-center rounded-2xl"
           alt="rizwan-illustraion"
+          loading="lazy"
+          title="Rizwan's illustraion"
+          aria-label="img"
         />
       </div>
     </section>

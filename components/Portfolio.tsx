@@ -2,28 +2,28 @@ import { Github, ArrowUpRightFromSquareIcon } from "lucide-react";
 const Portfolio = () => {
   const projects = [
     {
-      image: "/d.png",
-      title: "Portfolio Development",
+      image: "/tiktok-emojiz-online.webp",
+      title: "TikTok Emojiz Online",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cupiditate quibusdam maiores cumque, voluptatibus veritatis!",
-      github: "https://github.com/rizwanwebdev",
-      live: "https://github.com/rizwanwebdev",
+        "Discover TikTokEmojiz.online, a tool built to help users copy hidden TikTok emoji codes and download transparent PNG emojis.",
+      github: "https://github.com/rizwanwebdev/tiktok-emojiz-online",
+      live: "https://tiktokemojiz.online/",
     },
     {
-      image: "/full.webp",
-      title: "Portfolio Development",
+      image: "/cooking-art.webp",
+      title: "Cooking Art",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cupiditate quibusdam maiores cumque, voluptatibus veritatis!",
-      github: "https://github.com/rizwanwebdev",
-      live: "https://github.com/rizwanwebdev",
+        "A simple and practical collection of cooking recipes and tips for home chefs.",
+      github: "https://github.com/rizwanwebdev/cooking-art",
+      live: "https://cookingart.vercel.app/",
     },
     {
-      image: "/r.png",
-      title: "Portfolio Development",
+      image: "/movies-explorer.webp",
+      title: "Movies Explorer",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cupiditate quibusdam maiores cumque, voluptatibus veritatis!",
-      github: "https://github.com/rizwanwebdev",
-      live: "https://github.com/rizwanwebdev",
+        "A web app to explore movies, view details, and discover new films.",
+      github: "https://github.com/rizwanwebdev/movies-explorer",
+      live: "https://moviesmesh.vercel.app/",
     },
   ];
   return (
@@ -41,15 +41,19 @@ const Portfolio = () => {
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col gap-4 group">
             <div className="relative overflow-hidden">
-              <img src="/d.png" alt="" />
+              <img role="img" className="aspect-4/3" src="/d.png" alt="" />
               <div className="absolute transition-all duration-300  -bottom-20 group-hover:bottom-2 right-2 flex flex-row gap-2">
                 <a
                   href={project.github}
+                  title="github url"
+                  aria-label="github url"
                   className="w-10 h-10 bg-primary rounded-full flex justify-center items-center  text-neutral"
                 >
                   <Github />
                 </a>
                 <a
+                  title="live demo url"
+                  aria-label="live demo url"
                   href={project.live}
                   className="w-10 h-10 bg-primary rounded-full flex justify-center items-center  text-neutral"
                 >
