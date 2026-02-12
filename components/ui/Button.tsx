@@ -1,15 +1,20 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Target } from "lucide-react";
 type ButtonProps = {
   text: string;
   variant: "primary" | "secondry";
   disabled?: boolean;
   submit?: boolean;
+  isBlank?: boolean;
+  href?: string;
+  animation?: string;
 };
 export function Button({
   text,
   variant,
   submit = false,
-  disabled = false,
+  isBlank = false,
+  href,
+  animation,
 }: ButtonProps) {
   const varnt = `${variant === "primary" ? "bg-primary hover:bg-primary/80 text-background  border-foreground hover:border-primary" : "bg-background hover:bg-background/80 text-foreground  border-primary hover:border-primary/80"}`;
 
@@ -18,9 +23,15 @@ export function Button({
       name="button"
       aria-label="button"
       type={submit ? "submit" : "button"}
-      className={`btnBaseStyle ${varnt} `}
+      className={`btnBaseStyle ${animation} ${varnt} `}
     >
-      {text}
+      {submit ? (
+        text
+      ) : (
+        <a href={href} target={isBlank ? "_blank" : undefined}>
+          {text}
+        </a>
+      )}
     </button>
   );
 }

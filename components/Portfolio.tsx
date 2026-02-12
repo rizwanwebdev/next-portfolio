@@ -39,14 +39,20 @@ const Portfolio = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 *:transition-all *:duration-300 *:shadow-sm *:bg-background *:overflow-hidden *:rounded-xl *:border-2 *:border-foreground/20">
         {projects.map((project, index) => (
-          <div key={index} className="flex flex-col gap-4 group">
+          <div key={index} className="flex flex-col gap-4 group animate-card">
             <div className="relative overflow-hidden">
-              <img role="img" className="aspect-4/3" src="/d.png" alt="" />
+              <img
+                role="img"
+                className="aspect-4/3"
+                src={project.image}
+                alt={project.title}
+              />
               <div className="absolute transition-all duration-300  -bottom-20 group-hover:bottom-2 right-2 flex flex-row gap-2">
                 <a
                   href={project.github}
                   title="github url"
                   aria-label="github url"
+                  target="_blank"
                   className="w-10 h-10 bg-primary rounded-full flex justify-center items-center  text-neutral"
                 >
                   <Github />
@@ -54,6 +60,7 @@ const Portfolio = () => {
                 <a
                   title="live demo url"
                   aria-label="live demo url"
+                  target="_blank"
                   href={project.live}
                   className="w-10 h-10 bg-primary rounded-full flex justify-center items-center  text-neutral"
                 >
@@ -62,8 +69,12 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="p-4">
-              <h3 className="text-3xl leading-10">{project.title}</h3>
-              <p className="font-medium tracking-wide">{project.description}</p>
+              <h3 aria-label="title" className="text-3xl leading-10">
+                {project.title}
+              </h3>
+              <p aria-label="description" className="font-medium tracking-wide">
+                {project.description}
+              </p>
             </div>
           </div>
         ))}

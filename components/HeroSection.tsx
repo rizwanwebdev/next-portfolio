@@ -12,8 +12,19 @@ const HeroSection = () => {
         and strong UX.
       </p>
       <div className="flex flex-col items-center md:flex-row gap-4">
-        <Button text="See My Projects" variant="primary" />
-        <Button text="Let's Talk" variant="primary" />
+        <Button
+          // animation="animate-left"
+          href="#works"
+          text="See My Projects"
+          variant="primary"
+        />
+        <Button
+          href="https://cal.com/rizwandev/30min"
+          isBlank
+          // animation="animate-right"
+          text="Let's Talk"
+          variant="primary"
+        />
       </div>
     </section>
   );

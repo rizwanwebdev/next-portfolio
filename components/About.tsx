@@ -6,7 +6,7 @@ const About = () => {
       id="about"
       className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-6"
     >
-      <div className="flex flex-col gap-4 h-full">
+      <div className=" flex flex-col gap-4 h-full animate-left">
         <div className=" *:leading-17">
           <h3 className="text-4xl font-semibold">Hey, I'm</h3>
           <h2 className="text-7xl text-primary  font-semibold">Rizwan Zia</h2>
@@ -25,11 +25,16 @@ const About = () => {
         <span className="text-xl font-medium">Connect With Me</span>
         <Socials size={10} />
         <div className="flex flex-wrap gap-4 mt-6">
-          <Button text="See My Projects" variant="primary" />
-          <Button text="Let's Talk" variant="primary" />
+          <Button text="See My Projects" href="#works" variant="primary" />
+          <Button
+            text="Let's Talk"
+            href="https://cal.com/rizwandev/30min"
+            isBlank
+            variant="primary"
+          />
         </div>
       </div>
-      <div className="flex justify-center max-h-150 ">
+      <div className=" flex justify-center max-h-150 animate-right">
         <img
           src="/rizwan-frontend-developer.png"
           alt="rizwan-frontend-developer"

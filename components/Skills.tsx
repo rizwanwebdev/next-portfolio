@@ -17,7 +17,7 @@ const Skills = () => {
         {/* Skill Layout */}
         <div className="grid gap-10 md:grid-cols-3">
           {/* Frontend & Design (Primary) */}
-          <div className="md:col-span-2 rounded-3xl  p-10 shadow-sm bg-background border-2 border-foreground/20 flex flex-col gap-10">
+          <div className="md:col-span-2 rounded-3xl  p-10 shadow-sm bg-background border-2 border-foreground/20 flex flex-col gap-10 animate-left">
             <h3 className="text-2xl md:text-3xl text-center font-bold">
               🎨🖌️ Frontend & UI Engineering
             </h3>
@@ -59,7 +59,7 @@ const Skills = () => {
           </div>
 
           {/* Supporting Skills */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-10">
+          <div className="animate-right grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-10">
             {/* Design */}
             <div className="rounded-3xl  p-8 shadow-sm bg-background border-2 border-foreground/20 flex flex-col gap-2">
               <h3 className="font-heading text-xl font-semibold mb-4">

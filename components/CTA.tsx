@@ -12,7 +12,7 @@ const CTA = () => {
             Frontend developer available for impactful projects and
             product-focused teams.
           </p>
-          <Button text="Get In Touch" variant="secondry" />
+          <Button text="Get In Touch" href="#contact" variant="secondry" />
         </div>
         <svg
           id="visual"
@@ -38,7 +38,7 @@ const CTA = () => {
         </svg>
       </div>
       <img
-        className="absolute -top-10 -left-10 lg:top-0 lg:left-10 w-80 -z-10"
+        className="absolute animate-dot -top-10 -left-10 lg:top-0 lg:left-10 w-80 -z-10"
         src="/circle-3d.webp"
         alt=""
       />

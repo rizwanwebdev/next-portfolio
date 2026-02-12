@@ -18,7 +18,7 @@ export function Socials({ size = 10 }) {
         <Github />
       </a>
       <a
-        href="https://instagram. com/rizwanwebdev"
+        href="https://instagram.com/rizwanwebdev"
         target="_blank"
         className={baseStyle}
       >

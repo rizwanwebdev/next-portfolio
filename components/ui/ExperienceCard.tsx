@@ -8,7 +8,7 @@ export function ExperienceCard({ title, type, desc, side }: Card) {
   return (
     <div className={`relative timeline-item ${side}`}>
       <span className="dot animate-dot"></span>
-      <div className="animate-card bg-primary  tracking-wide rounded-2xl p-6 flex flex-col gap-4">
+      <div className="bg-primary animate-right  tracking-wide rounded-2xl p-6 flex flex-col gap-4">
         <h3 className="text-2xl md:text-3xl font-bold text-neutral ">
           {title}
         </h3>

@@ -34,14 +34,19 @@ const Serviceses = () => {
         {services.map((srvc, index) => (
           <div
             key={index}
-            className="shadow-sm bg-background border-2 border-foreground/20 flex justify-center items-center gap-4 rounded-2xl px-3 py-8  flex-col *:text-center"
+            className="shadow-sm animate-cards animate-card bg-background border-2 border-foreground/20 flex justify-center items-center gap-4 rounded-2xl px-3 py-8  flex-col *:text-center"
           >
             <srvc.icon className="w-20 h-20 text-primary" />
             <h3 className="leading-12 font-bold text-4xl text-primary">
               {srvc.title}
             </h3>
             <p className="font-medium tracking-wide text-lg">{srvc.service}</p>
-            <Button text="Explore Service" variant="primary" />
+            <Button
+              href="https://cal.com/rizwandev/30min"
+              isBlank
+              text="Get Service"
+              variant="primary"
+            />
           </div>
         ))}
       </div>
