@@ -37,7 +37,7 @@ const Portfolio = () => {
           Real work that focuses on design, performance and result
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 *:transition-all *:duration-300 *:shadow-sm *:bg-background *:overflow-hidden *:rounded-xl *:border-2 *:border-foreground/20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 *:transition-all *:duration-300 *:shadow-sm *:bg-background *:overflow-hidden *:rounded-xl *:border-2 *:border-foreground/20">
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col gap-4 group">
             <div className="relative overflow-hidden">

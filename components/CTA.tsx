@@ -22,10 +22,10 @@ const CTA = () => {
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           className="absolute inset-0 -z-8 object-cover object-center"
-          fill="var(--color-primary)"
+          fill="var(--color-foreground)"
         >
           <rect x="0" y="0" width="1200" height="900"></rect>
-          <g fill="var(--color-foreground)">
+          <g fill="var(--color-primary)">
             <circle r="115" cx="706" cy="229"></circle>
             <circle r="65" cx="419" cy="458"></circle>
             <circle r="64" cx="687" cy="494"></circle>

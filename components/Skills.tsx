@@ -47,6 +47,14 @@ const Skills = () => {
                   "Clean UI Architecture",
                 ]}
               />
+              <SkillGroup
+                title="Some Extras"
+                items={[
+                  "Shopify Cutomization",
+                  "Shopify Custom Theme Development",
+                  "Chrome Extension Development",
+                ]}
+              />
             </div>
           </div>
 

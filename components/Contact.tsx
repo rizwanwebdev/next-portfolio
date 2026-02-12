@@ -1,3 +1,4 @@
+import FORM from "./FORM";
 import { Button } from "./ui/Button";
 const Contact = () => {
   return (
@@ -19,57 +20,8 @@ const Contact = () => {
           </span>
         </div>
         <div>
-          <form className="flex flex-col gap-4 *:flex *:flex-col">
-            <fieldset className="relative">
-              <input
-                type="text"
-                id="name"
-                placeholder=" "
-                className="form-input border px-3 py-3"
-                name="name"
-                autoComplete="name"
-                required
-              />
-              <label htmlFor="name" className="form-label text-foreground/90">
-                Full Name
-              </label>
-            </fieldset>
-            <fieldset className="relative">
-              <input
-                type="text"
-                id="email"
-                name="email"
-                autoComplete="email"
-                placeholder=" "
-                required
-                className="form-input border px-3 py-3"
-              />
-              <label htmlFor="email" className="form-label text-foreground/90">
-                Email
-              </label>
-            </fieldset>
-            <fieldset className="relative">
-              <textarea
-                name="message"
-                autoComplete="message"
-                id="message"
-                aria-label="message"
-                className="form-input border px-3 py-3"
-                rows={6}
-                required
-                placeholder=" "
-              />
-              <label
-                htmlFor="message"
-                className="message-label text-foreground/90"
-              >
-                Message
-              </label>
-            </fieldset>
-            <fieldset>
-              <Button submit text="Send" variant="black" disabled />
-            </fieldset>
-          </form>
+          {/* FORM ==== */}
+          <FORM />
         </div>
       </div>
       <div className="w-full h-full overflow-hidden">

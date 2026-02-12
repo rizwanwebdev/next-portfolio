@@ -79,6 +79,37 @@ body {
   }
 }
 
+/* animations */
+
+.animate-card {
+  border: none;
+  animation: cardAppear linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-dot {
+  animation: dot ease both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+@keyframes dot {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    background: var(--color-foreground);
+    opacity: 1;
+  }
+}
+
 /* 
 Color	Hex	Use case / vibe
 Deep Blue	#003366	Bold, professional, techy, works well on light bg and white text
@@ -127,10 +158,10 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   background: var(--primary);
   transform: translateX(-50%);
 }
-.timeline-item.right {
+.timeline-item.card-right {
   margin-left: calc(50% + 50px);
 }
-.timeline-item.left {
+.timeline-item.card-left {
   margin-right: 50px;
   max-width: calc(50% - 50px);
 }
@@ -148,7 +179,7 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   border: 2px solid var(--neutral);
 }
 
-.timeline-item.right .dot {
+.timeline-item.card-right .dot {
   left: -59px;
   right: auto;
   background: var(--primary) !important;
@@ -158,13 +189,16 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   position: absolute;
   top: 25%;
   border-style: solid;
+  animation: cardAppear linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
-.timeline-item.right::before {
+.timeline-item.card-right::before {
   left: -29px;
   border-width: 20px 30px 20px 0;
   border-color: transparent var(--primary) transparent transparent;
 }
-.timeline-item.left::before {
+.timeline-item.card-left::before {
   right: -29px;
   border-width: 20px 0 20px 30px;
   border-color: transparent transparent transparent var(--primary);
@@ -177,7 +211,7 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   }
 
   .timeline-item,
-  .timeline-item.right {
+  .timeline-item.card-right {
     max-width: calc(100% - 55px);
     margin-left: 55px;
     margin-right: 0px;
@@ -189,20 +223,14 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   }
 
   .timeline-item .dot,
-  .timeline-item.right .dot {
+  .timeline-item.card-right .dot {
     top: 26.5%;
     left: -55px;
     /* right: -40px; */
   }
-  .timeline-item.left::before {
+  .timeline-item.card-left::before {
     right: 100%;
     border-width: 20px 30px 20px 0;
     border-color: transparent var(--primary) transparent transparent;
   }
-}
-.svg-bg {
-  background-image: url("../assets/circle-scatter-haikei.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }

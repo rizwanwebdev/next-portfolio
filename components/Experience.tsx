@@ -38,7 +38,7 @@ const Experience = () => {
             title={exp.title}
             type={exp.type}
             desc={exp.desc}
-            side={index % 2 == 0 ? "left" : "right"}
+            side={index % 2 == 0 ? "card-left" : "card-right"}
           />
         ))}
       </div>
