@@ -12,7 +12,12 @@ const CTA = () => {
             Frontend developer available for impactful projects and
             product-focused teams.
           </p>
-          <Button text="Get In Touch" href="#contact" variant="secondry" />
+          <Button
+            text="Get In Touch"
+            title="Contact"
+            href="#contact"
+            variant="secondry"
+          />
         </div>
         <svg
           id="visual"

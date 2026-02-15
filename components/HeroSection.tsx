@@ -17,8 +17,10 @@ const HeroSection = () => {
           href="#works"
           text="See My Projects"
           variant="primary"
+          title="Projects I had worked on"
         />
         <Button
+          title="Cal.com Booking link"
           href="https://cal.com/rizwandev/30min"
           isBlank
           // animation="animate-right"

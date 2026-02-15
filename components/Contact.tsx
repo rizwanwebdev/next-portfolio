@@ -13,6 +13,7 @@ const Contact = () => {
           </h2>
           <Button
             text="Schedule a meeting"
+            title="Cal.com Booking link"
             href="https://cal.com/rizwandev/30min"
             isBlank
             variant="primary"

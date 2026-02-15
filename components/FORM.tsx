@@ -86,9 +86,14 @@ const FORM = () => {
       </fieldset>
       <fieldset>
         {loading ? (
-          <Button submit text="Sending..." variant="primary" />
+          <Button
+            submit
+            title="Sending..."
+            text="Sending..."
+            variant="primary"
+          />
         ) : (
-          <Button submit text="Send" variant="primary" />
+          <Button submit title="Send Message" text="Send" variant="primary" />
         )}
       </fieldset>
     </form>

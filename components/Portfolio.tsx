@@ -47,7 +47,7 @@ const Portfolio = () => {
                 src={project.image}
                 alt={project.title}
               />
-              <div className="absolute transition-all duration-300  -bottom-20 group-hover:bottom-2 right-2 flex flex-row gap-2">
+              <div className="absolute transition-all duration-300  -bottom-20 group-hover:bottom-2 right-2 flex flex-row gap-2 *:transition-all *:duration-200 *:hover:scale-110 *:active:scale-90">
                 <a
                   href={project.github}
                   title="github url"

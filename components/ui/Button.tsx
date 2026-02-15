@@ -6,6 +6,7 @@ type ButtonProps = {
   submit?: boolean;
   isBlank?: boolean;
   href?: string;
+  title?: string;
   animation?: string;
 };
 export function Button({
@@ -15,11 +16,13 @@ export function Button({
   isBlank = false,
   href,
   animation,
+  title,
 }: ButtonProps) {
   const varnt = `${variant === "primary" ? "bg-primary hover:bg-primary/80 text-background  border-foreground hover:border-primary" : "bg-background hover:bg-background/80 text-foreground  border-primary hover:border-primary/80"}`;
 
   return (
     <button
+      title={title}
       name="button"
       aria-label="button"
       type={submit ? "submit" : "button"}

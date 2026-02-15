@@ -5,7 +5,7 @@ const MobileMenu = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="sm:hidden relative">
-      <button className="cursor-pointer">
+      <div className="cursor-pointer">
         <input type="checkbox" id="checkbox" />
         <label
           onClick={() => setOpen(!open)}
@@ -16,7 +16,7 @@ const MobileMenu = () => {
           <div className="bars" id="bar2"></div>
           <div className="bars" id="bar3"></div>
         </label>
-      </button>
+      </div>
       {open ? (
         <nav className="absolute w-62  right-2 bg-primary rounded-2xl px-3 py-10">
           <ul className="flex flex-col justify-center items-center gap-4 text-neutral *:font-heading *:text-xl *:font-medium">

@@ -42,6 +42,7 @@ const Serviceses = () => {
             </h3>
             <p className="font-medium tracking-wide text-lg">{srvc.service}</p>
             <Button
+              title="Cal.com Schedule link"
               href="https://cal.com/rizwandev/30min"
               isBlank
               text="Get Service"

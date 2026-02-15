@@ -41,6 +41,7 @@ body {
 html,
 body {
   scroll-behavior: smooth;
+  width: 100%;
 }
 @layer base {
   h1,
@@ -73,8 +74,9 @@ body {
 }
 @layer components {
   .btnBaseStyle {
-    @apply font-bold rounded cursor-pointer py-2 px-4 border-b-4 transition-all duration-200  w-fit;
+    @apply font-bold rounded cursor-pointer py-2 px-4 border-b-4 transition-all duration-300 hover:scale-110  w-fit focus:scale-90 active:scale-90;
   }
+
   .socialStyles {
     @apply bg-primary rounded-full flex justify-center items-center  text-neutral;
   }
@@ -84,7 +86,7 @@ body {
 .animate-card {
   animation: cardAppear linear both;
   animation-timeline: view();
-  animation-range: entry 0% cover 35%;
+  animation-range: entry 0% cover 30%;
 }
 @keyframes cardAppear {
   from {
@@ -99,7 +101,7 @@ body {
 .animate-dot {
   animation: dot ease both;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 30%;
 }
 @keyframes dot {
   from {
@@ -114,7 +116,7 @@ body {
 .animate-left {
   animation: leftAnimation ease both;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 30%;
 }
 @keyframes leftAnimation {
   from {
@@ -129,7 +131,7 @@ body {
 .animate-right {
   animation: rightAnimation ease both;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 30%;
 }
 @keyframes rightAnimation {
   from {
@@ -296,7 +298,7 @@ Forest Green	#1B5E20	Confident, fresh, readable, professional
   border-style: solid;
   animation: cardAppear linear both;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 30%;
 }
 .timeline-item.card-right::before {
   left: -29px;

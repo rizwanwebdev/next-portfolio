@@ -25,9 +25,15 @@ const About = () => {
         <span className="text-xl font-medium">Connect With Me</span>
         <Socials size={10} />
         <div className="flex flex-wrap gap-4 mt-6">
-          <Button text="See My Projects" href="#works" variant="primary" />
+          <Button
+            text="See My Projects"
+            title="Projects I have worked on"
+            href="#works"
+            variant="primary"
+          />
           <Button
             text="Let's Talk"
+            title="Cal.com Booking link"
             href="https://cal.com/rizwandev/30min"
             isBlank
             variant="primary"
