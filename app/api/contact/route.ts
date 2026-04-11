@@ -54,7 +54,7 @@ export async function POST(req: Request) {
                 <!-- Footer -->
                 <tr>
                   <td style="padding-top:20px; text-align:center; font-size:13px; color:#999;">
-                   <a style="text-decoration:none;" href="https://rizwanweb.site" target="_blank"> Rizwan's Portfolio</a>
+                   <a style="text-decoration:none;" href="https://rizwan.one" target="_blank"> Rizwan's Portfolio</a>
                   </td>
                 </tr>
 
@@ -66,8 +66,8 @@ export async function POST(req: Request) {
     `;
 
     const { error } = await resend.emails.send({
-      from: "Rizwan's Portfolio <contact@rizwanweb.site>",
-      to: "contact@rizwanweb.site",
+      from: "Rizwan's Portfolio <hey@rizwan.one>",
+      to: "hey@rizwan.one",
       subject: `New message from: ${name}`,
       html: emailHtml,
     });

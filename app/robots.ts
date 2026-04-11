@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://rizwanweb.site/sitemap.xml",
+    sitemap: "https://rizwan.one/sitemap.xml",
   };
 }

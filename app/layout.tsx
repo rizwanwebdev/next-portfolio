@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rizwanweb.site"),
+  metadataBase: new URL("https://rizwan.one"),
 
   title: {
     default:
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Web Performance Optimization",
   ],
 
-  authors: [{ name: "Rizwan", url: "https://rizwanweb.site" }],
+  authors: [{ name: "Rizwan", url: "https://rizwan.one" }],
 
   creator: "Rizwan",
 
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       "Rizwan – Frontend and Shopify Developer | React & Next.js Specialist",
     description:
       "I design and build responsive, accessible, and performance-focused web applications using React and Next.js.",
-    url: "https://rizwanweb.site",
+    url: "https://rizwan.one",
     siteName: "Rizwan – Frontend Developer's Portfolio",
     images: [
       {

@@ -1,14 +1,3 @@
-import { ChevronRight, Target } from "lucide-react";
-type ButtonProps = {
-  text: string;
-  variant: "primary" | "secondry";
-  disabled?: boolean;
-  submit?: boolean;
-  isBlank?: boolean;
-  href?: string;
-  title?: string;
-  animation?: string;
-};
 export function Button({
   text,
   variant,
@@ -18,23 +7,31 @@ export function Button({
   animation,
   title,
 }: ButtonProps) {
-  const varnt = `${variant === "primary" ? "bg-primary hover:bg-primary/80 text-background  border-foreground hover:border-primary" : "bg-background hover:bg-background/80 text-foreground  border-primary hover:border-primary/80"}`;
+  const varnt = `${
+    variant === "primary"
+      ? "bg-primary hover:bg-primary/80 text-background border-foreground hover:border-primary"
+      : "bg-background hover:bg-background/80 text-foreground border-primary hover:border-primary/80"
+  }`;
 
-  return (
+  const buttonEl = (
     <button
       title={title}
       name="button"
       aria-label="button"
       type={submit ? "submit" : "button"}
-      className={`btnBaseStyle ${animation} ${varnt} `}
+      className={`btnBaseStyle ${animation} ${varnt}`}
     >
-      {submit ? (
-        text
-      ) : (
-        <a href={href} target={isBlank ? "_blank" : undefined}>
-          {text}
-        </a>
-      )}
+      {text}
     </button>
+  );
+
+  // If it's a submit button → return button only
+  if (submit) return buttonEl;
+
+  // Otherwise wrap with anchor
+  return (
+    <a href={href} target={isBlank ? "_blank" : undefined}>
+      {buttonEl}
+    </a>
   );
 }

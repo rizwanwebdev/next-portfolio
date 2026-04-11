@@ -32,10 +32,10 @@ const FooterSection = () => {
               <Mail className="w-8 h-8 text-primary" />
               <a
                 className="text-primary"
-                href="mailto:contact@rizwanweb.site"
+                href="mailto:hey@rizwan.one"
                 target="_blank"
               >
-                contact@rizwanweb.site
+                hey@rizwan.one
               </a>
             </p>
             <Socials size={10} />
