@@ -1,3 +1,14 @@
+type ButtonProps = {
+  text: string;
+  variant: "primary" | "secondry";
+  disabled?: boolean;
+  submit?: boolean;
+  isBlank?: boolean;
+  href?: string;
+  title?: string;
+  animation?: string;
+};
+
 export function Button({
   text,
   variant,
@@ -13,7 +24,7 @@ export function Button({
       : "bg-background hover:bg-background/80 text-foreground border-primary hover:border-primary/80"
   }`;
 
-  const buttonEl = (
+  const btn = (
     <button
       title={title}
       name="button"
@@ -25,13 +36,13 @@ export function Button({
     </button>
   );
 
-  // If it's a submit button → return button only
-  if (submit) return buttonEl;
+  // submit → normal button
+  if (submit) return btn;
 
-  // Otherwise wrap with anchor
+  // link → wrap button
   return (
     <a href={href} target={isBlank ? "_blank" : undefined}>
-      {buttonEl}
+      {btn}
     </a>
   );
 }
